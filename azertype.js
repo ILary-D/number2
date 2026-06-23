@@ -1,8 +1,30 @@
+/*let inputEcriture = document.getElementById("inputEcriture")
+console.log(inputEcriture);
+
+let btnValiderMot = document.getElementById("btnValiderMot")
+console.groupCollapsed(btnValiderMot)
+
+let zoneProposition = document.querySelector(".zoneProposition")
+console.log(zoneProposition);
+
+let zoneScore = document.querySelector(".zoneScore span")
+console.log(zoneScore);
+let listbtnradio = document.querySelectorAll(".optionSource");
+console.log(listbtnradio);
+
+for (let i = 0; i < listbtnradio.length; i++) {
+    console.log(listbtnradio[i]);
+}*/
 
 
 function affichetResultat( score, nbmotsproposés){
     // afficher le score
-console.log("votre score est de : " + score+ " sur " + nbmotsproposés )
+     //utilisation des methodes (le DOM)
+    let spanScore = document.querySelector(".zoneScore span")
+   
+    let afficherscore = `${score} / ${nbmotsproposés}`
+   spanScore.textContent = afficherscore
+    console.log("votre score est de : " + score+ " sur " + nbmotsproposés )
 }
 function choisirPhraseOuMot(){
     // choisir les mots ou les phrases
@@ -41,5 +63,4 @@ function lancerJeu(){
    affichetResultat (score,  nbmotsproposés)
 }
 lancerJeu()
-
 
